@@ -1,0 +1,107 @@
+:root {
+    --coral: #d97b73;
+    --red: #e23b4e;
+    --paper: #fffaf5;
+    --ink: #55363a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background: #f8e3dc;
+    color: var(--ink);
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+.card {
+    width: min(100%, 460px);
+    overflow: hidden;
+    background: var(--paper);
+    border: 1px solid #eac5ba;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(99, 45, 42, .12);
+}
+
+.window {
+    padding: 12px 20px;
+    background: var(--coral);
+    color: white;
+    font-size: 15px;
+    letter-spacing: .04em;
+}
+
+.letter {
+    padding: 36px 32px 40px;
+    text-align: center;
+}
+
+.greeting {
+    margin: 0 0 22px;
+    color: var(--red);
+    font-style: italic;
+}
+
+h1 {
+    margin: 0 0 16px;
+    color: var(--red);
+    font-size: clamp(2rem, 8vw, 2.8rem);
+    line-height: 1.1;
+}
+
+.letter > p:not(.greeting) {
+    margin: 0 auto 30px;
+    max-width: 320px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.cats {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 0 auto 30px;
+}
+
+.cats img {
+    width: 30%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border: 3px solid white;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(99, 45, 42, .16);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    min-height: 44px;
+}
+
+button {
+    min-width: 88px;
+    padding: 11px 18px;
+    border: 0;
+    border-radius: 6px;
+    color: white;
+    background: var(--red);
+    cursor: pointer;
+    font: inherit;
+    transition: transform .18s ease, background .18s ease;
+}
+
+button:hover {
+    background: #c32f42;
+}
+
+.btn--no {
+    position: relative;
+    transition: transform .08s ease-out, background .12s ease;
+}
