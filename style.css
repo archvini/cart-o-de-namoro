@@ -105,3 +105,26 @@ button:hover {
     position: relative;
     transition: transform .08s ease-out, background .12s ease;
 }
+
+#chuva-petalas {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.petala {
+  position: absolute;
+  top: -20px;
+  width: 14px;
+  height: 20px;
+  border-radius: 80% 0 80% 0;
+  background: #e83e62;
+  animation: cair linear infinite;
+}
+
+@keyframes cair {
+  to {
+    transform: translateY(110vh) rotate(720deg);
+  }
+}

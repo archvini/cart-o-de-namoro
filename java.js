@@ -17,3 +17,14 @@ yesButton.addEventListener('click', () => {
     yesButton.textContent = '❤️';
     noButton.remove();
 });
+
+const chuva = document.querySelector("#chuva-petalas");
+
+for (let i = 0; i < 30; i++) {
+  const petala = document.createElement("span");
+  petala.className = "petala";
+  petala.style.left = `${Math.random() * 100}vw`;
+  petala.style.animationDuration = `${4 + Math.random() * 5}s`;
+  petala.style.animationDelay = `${Math.random() * 5}s`;
+  chuva.appendChild(petala);
+}
